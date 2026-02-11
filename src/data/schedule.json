@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "title": "Satsang Schedule & Venue",
+    "subtitle": "Join us for our regular spiritual gatherings",
+    "backgroundImage": "/images/guruji-pics/guru-darshan-full.jpg"
+  },
+  "venue": {
+    "heading": "VENUE - Caxton Village Hall",
+    "name": "Caxton Village Hall",
+    "address": "Caxton, Cambridge CB23 3PL",
+    "description": "We are pleased to announce that our upcoming Satsangs will take place at Caxton Village Hall, located at Caxton, Cambridge CB23 3PL. The venue offers ample parking space, and there will be a designated area for children's activities to ensure a comfortable experience for families. Each Satsang will be followed by a Langar Prashad, offering the divine blessings of GuruJi.",
+    "sewaNote": "Over time, we will share the list of designated Sewa (service) and Sewadars (volunteers) who will be supporting the various activities during our Satsangs. We encourage everyone to participate in the Sewa with an open heart, as it is a vital part of our community's spirit and the service to GuruJi.",
+    "closingNote": "We look forward to welcoming you to our Satsangs, where we can collectively seek GuruJi's blessings and share in the divine experience together."
+  },
+  "schedule2026": {
+    "heading": "Monthly Satsang Schedule (2026)",
+    "description": "We organize GuruJi's Satsang once every month at a fixed date and venue, allowing all devotees to plan in advance and join us for this divine gathering. While the date remains consistent, please note that in exceptional circumstances, we may need to make changes. In such cases, prior notice will be shared with the sangat.",
+    "closingNote": "We kindly request everyone to stay updated and plan accordingly to ensure you don't miss the spiritual bliss of being in GuruJi's presence and sharan.",
+    "dates": [
+      { "date": "31-Jan-26", "day": "Saturday", "time": "15:00 - 17:00" },
+      { "date": "28-Feb-26", "day": "Saturday", "time": "15:00 - 17:00" },
+      { "date": "28-Mar-26", "day": "Saturday", "time": "15:00 - 17:00" },
+      { "date": "25-Apr-26", "day": "Saturday", "time": "15:00 - 17:00" },
+      { "date": "31-May-26", "day": "Sunday", "time": "15:00 - 17:00" },
+      { "date": "27-Jun-26", "day": "Saturday", "time": "15:00 - 17:00" },
+      { "date": "25-Jul-26", "day": "Saturday", "time": "15:00 - 17:00" },
+      { "date": "29-Aug-26", "day": "Saturday", "time": "15:00 - 17:00" },
+      { "date": "26-Sep-26", "day": "Saturday", "time": "15:00 - 17:00" },
+      { "date": "31-Oct-26", "day": "Saturday", "time": "15:00 - 17:00" },
+      { "date": "28-Nov-26", "day": "Saturday", "time": "15:00 - 17:00" },
+      { "date": "19-Dec-26", "day": "Saturday", "time": "15:00 - 17:00" }
+    ]
+  },
+  "guidelines": {
+    "heading": "Key Guidelines for Us",
+    "intro": "These Guidelines serve as a gentle reminder to preserve the sanctity, peace, and divine essence of the satsang environment. These guidelines are not just rules — they are a path to help devotees experience the satsang in its purest form, with full spiritual presence and inner stillness.",
+    "description": "By encouraging silence, mindfulness, and disciplined behavior, these practices create an atmosphere where every individual can connect more deeply with GuruJi's teachings and vibrations.",
+    "items": [
+      "Please arrive on time to join the prayers from the beginning.",
+      "Dress modestly and respectfully.",
+      "Remove shoes before entering the prayer hall.",
+      "Maintain a peaceful and respectful atmosphere.",
+      "Meditate during shabads with full spiritual presence.",
+      "Finish prasad with respect and gratitude.",
+      "Participate in seva only when assigned.",
+      "Children are welcome and should be supervised by parents.",
+      "Mobile phones should be on silent mode during satsang.",
+      "Please help with seva if you are able — every contribution matters."
+    ],
+    "closingNote": "Following these practices wholeheartedly allows each of us to receive GuruJi's blessings with devotion, humility, and gratitude. Ultimately, they help us move closer to the divine by deepening our inner connection and creating a serene, spiritually charged space for all."
+  },
+  "schedule2025": {
+    "heading": "Satsang Schedule Archive - 2025",
+    "description": "This archive contains the Guru Ji Satsang Schedule for the year 2025. We organized Guru Ji's Satsang once every month at a fixed date and venue, allowing all devotees to plan in advance and participate in this divine gathering.",
+    "note": "The Satsang Schedule for 2026 is displayed above. Kindly refer to the schedule above for the latest dates and details.",
+    "dates": [
+      { "date": "18-Jan-25", "day": "Saturday", "time": "15:00 - 17:00", "occasion": "Lohri" },
+      { "date": "22-Feb-25", "day": "Saturday", "time": "15:00 - 17:00", "occasion": "MahaShivRatri" },
+      { "date": "15-Mar-25", "day": "Saturday", "time": "15:00 - 17:00", "occasion": "Holi" },
+      { "date": "19-Apr-25", "day": "Saturday", "time": "15:00 - 17:00", "occasion": "Vaisakhi" },
+      { "date": "31-May-25", "day": "Saturday", "time": "15:00 - 17:00", "occasion": "Mahasamadhi" },
+      { "date": "22-Jun-25", "day": "Saturday", "time": "15:00 - 17:00", "occasion": "Father's Day" },
+      { "date": "12-Jul-25", "day": "Saturday", "time": "15:00 - 17:00", "occasion": "GuruJi's Birthday" },
+      { "date": "02-Aug-25", "day": "Saturday", "time": "15:00 - 17:00", "occasion": "Rakhi" },
+      { "date": "28-Sep-25", "day": "Sunday", "time": "15:00 - 17:00", "occasion": "1st Prakash Divas" },
+      { "date": "25-Oct-25", "day": "Saturday", "time": "15:00 - 17:00", "occasion": "Diwali" },
+      { "date": "08-Nov-25", "day": "Saturday", "time": "15:00 - 17:00", "occasion": "Guru Nanak Dev Ji's Birthday" },
+      { "date": "27-Dec-25", "day": "Saturday", "time": "15:00 - 17:00", "occasion": "X-Mas" }
+    ]
+  }
+}
