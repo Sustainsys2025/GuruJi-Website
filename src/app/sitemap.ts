@@ -1,8 +1,10 @@
 import type { MetadataRoute } from "next";
 import galleryData from "@/data/gallery.json";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://gurujicambridge.example.com";
+  const baseUrl = "https://gurujicambridge.com";
 
   const staticPages = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 1 },
