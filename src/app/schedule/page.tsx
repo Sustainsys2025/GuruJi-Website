@@ -4,6 +4,7 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import scheduleData from "@/data/schedule.json";
+import { getImagePath } from "@/lib/image-loader";
 
 export const metadata: Metadata = {
   title: "Satsang Schedule & Venue",
@@ -35,7 +36,7 @@ export default function SchedulePage() {
             <div className="flex-1 w-full">
               <div className="relative aspect-[3/4] max-w-md mx-auto rounded-lg overflow-hidden shadow-lg border border-gold-200/30">
                 <Image
-                  src="/images/guruji-pics/satsang-feb-26.webp"
+                  src={getImagePath("/images/guruji-pics/satsang-feb-26.webp")}
                   alt="Monthly Satsang Poster"
                   fill
                   className="object-cover"

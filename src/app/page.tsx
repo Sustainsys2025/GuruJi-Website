@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import SubscribeSection from "@/components/SubscribeSection";
 import homeData from "@/data/home.json";
 import siteData from "@/data/site.json";
+import { getImagePath } from "@/lib/image-loader";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -38,7 +39,7 @@ export default function HomePage() {
             <div className="flex-1 w-full">
               <div className="relative rounded-lg overflow-hidden shadow-lg diya-glow border border-gold-200/30">
                 <Image
-                  src="/images/guruji-pics/light-of-divinity.jpg"
+                  src={getImagePath("/images/guruji-pics/light-of-divinity.jpg")}
                   alt="Light of Divinity"
                   width={700}
                   height={400}
@@ -54,7 +55,7 @@ export default function HomePage() {
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/guruji-pics/temple-dome.jpg"
+            src={getImagePath("/images/guruji-pics/temple-dome.jpg")}
             alt="Temple dome background"
             fill
             className="object-cover"

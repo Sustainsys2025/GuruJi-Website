@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getImagePath } from "@/lib/image-loader";
 
 interface HeroSectionProps {
   title: string;
@@ -25,7 +26,7 @@ export default function HeroSection({
       {/* Background image */}
       {backgroundImage && (
         <Image
-          src={backgroundImage}
+          src={getImagePath(backgroundImage)}
           alt="Sacred background"
           fill
           className="object-cover"

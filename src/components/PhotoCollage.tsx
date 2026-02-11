@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { getImagePath } from "@/lib/image-loader";
 
 interface PhotoCollageProps {
   photos: string[];
@@ -32,7 +33,7 @@ export default function PhotoCollage({ photos, title }: PhotoCollageProps) {
             aria-label={`View photo ${i + 1} of ${photos.length} from ${title}`}
           >
             <Image
-              src={photo}
+              src={getImagePath(photo)}
               alt={`${title} - Photo ${i + 1}`}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -93,7 +94,7 @@ export default function PhotoCollage({ photos, title }: PhotoCollageProps) {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={photos[selectedIndex]}
+              src={getImagePath(photos[selectedIndex])}
               alt={`${title} - Photo ${selectedIndex + 1}`}
               fill
               className="object-contain"

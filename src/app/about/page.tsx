@@ -3,6 +3,7 @@ import Image from "next/image";
 import HeroSection from "@/components/HeroSection";
 import ContentSection from "@/components/ContentSection";
 import aboutData from "@/data/about.json";
+import { getImagePath } from "@/lib/image-loader";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -34,7 +35,7 @@ export default function AboutPage() {
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/guruji-pics/charan.jpg"
+            src={getImagePath("/images/guruji-pics/charan.jpg")}
             alt="Sacred charan background"
             fill
             className="object-cover"

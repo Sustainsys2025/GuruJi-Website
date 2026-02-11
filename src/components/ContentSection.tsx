@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getImagePath } from "@/lib/image-loader";
 
 interface ContentSectionProps {
   heading: string;
@@ -41,7 +42,7 @@ export default function ContentSection({
             <div className="flex-1 w-full">
               <div className="relative rounded-lg overflow-hidden shadow-lg diya-glow border border-gold-200/30 aspect-[3/4] max-w-md mx-auto">
                 <Image
-                  src={imageSrc}
+                  src={getImagePath(imageSrc)}
                   alt={imageAlt}
                   fill
                   className="object-cover object-top"

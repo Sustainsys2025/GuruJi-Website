@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
+import { getImagePath } from "@/lib/image-loader";
 
 interface NavChild {
   label: string;
@@ -55,7 +56,7 @@ export default function Navbar({ links, siteName }: NavbarProps) {
           {/* Logo / Site Name */}
           <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src="/images/guruji-pics/guru-darshan.jpg"
+              src={getImagePath("/images/guruji-pics/guru-darshan.jpg")}
               alt={siteName}
               width={40}
               height={40}

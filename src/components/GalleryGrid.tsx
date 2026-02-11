@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getImagePath } from "@/lib/image-loader";
 
 interface GalleryEvent {
   slug: string;
@@ -25,7 +26,7 @@ export default function GalleryGrid({ events }: GalleryGridProps) {
         >
           <div className="aspect-[4/3] relative">
             <Image
-              src={event.coverPhoto}
+              src={getImagePath(event.coverPhoto)}
               alt={event.title}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
