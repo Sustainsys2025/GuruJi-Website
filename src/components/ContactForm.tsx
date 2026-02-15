@@ -34,16 +34,17 @@ export default function ContactForm({
 
   if (submitted) {
     return (
-      <div className="bg-saffron-50 border border-gold-200 rounded-lg p-8 text-center diya-glow">
-        <h3 className="font-heading font-bold text-xl text-maroon-500 mb-2">
+      <div className="bg-lavender-50 border border-lavender-200 rounded-2xl p-8 text-center sacred-glow animate-scale-in">
+        <div className="text-lavender-400/60 text-xl mb-2">&#10022;</div>
+        <h3 className="font-heading font-bold text-xl text-lavender-600 mb-2">
           Thank You!
         </h3>
-        <p className="text-maroon-800/70">
+        <p className="text-indigo-500">
           Your message has been sent. We will get back to you soon.
         </p>
         <button
           onClick={() => setSubmitted(false)}
-          className="mt-4 text-maroon-500 underline hover:text-maroon-700 text-sm"
+          className="mt-4 text-lavender-500 hover:text-lavender-700 text-sm font-medium transition-colors duration-300"
         >
           Send another message
         </button>
@@ -52,8 +53,8 @@ export default function ContactForm({
   }
 
   return (
-    <div>
-      <h3 className="font-heading font-bold text-xl md:text-2xl text-maroon-800 mb-6">
+    <div className="reveal-on-scroll">
+      <h3 className="font-heading font-bold text-xl md:text-2xl text-indigo-700 mb-6">
         {title}
       </h3>
       <form onSubmit={handleSubmit} className="space-y-5">
@@ -65,11 +66,11 @@ export default function ContactForm({
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
             placeholder=" "
-            className="peer w-full px-4 pt-6 pb-2 border border-gold-200 rounded-sm text-base bg-white focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+            className="peer w-full px-5 pt-6 pb-2 border border-lavender-200 rounded-xl text-base bg-white focus:outline-none focus:ring-2 focus:ring-lavender-400 focus:border-transparent transition-all duration-300 text-indigo-700"
           />
           <label
             htmlFor="contact-name"
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-temple-400 text-base transition-all peer-focus:top-3 peer-focus:text-xs peer-focus:text-maroon-500 peer-[:not(:placeholder-shown)]:top-3 peer-[:not(:placeholder-shown)]:text-xs"
+            className="absolute left-5 top-1/2 -translate-y-1/2 text-indigo-300 text-base transition-all peer-focus:top-3 peer-focus:text-xs peer-focus:text-lavender-500 peer-[:not(:placeholder-shown)]:top-3 peer-[:not(:placeholder-shown)]:text-xs"
           >
             {fields.name}
           </label>
@@ -82,11 +83,11 @@ export default function ContactForm({
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             required
             placeholder=" "
-            className="peer w-full px-4 pt-6 pb-2 border border-gold-200 rounded-sm text-base bg-white focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+            className="peer w-full px-5 pt-6 pb-2 border border-lavender-200 rounded-xl text-base bg-white focus:outline-none focus:ring-2 focus:ring-lavender-400 focus:border-transparent transition-all duration-300 text-indigo-700"
           />
           <label
             htmlFor="contact-email"
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-temple-400 text-base transition-all peer-focus:top-3 peer-focus:text-xs peer-focus:text-maroon-500 peer-[:not(:placeholder-shown)]:top-3 peer-[:not(:placeholder-shown)]:text-xs"
+            className="absolute left-5 top-1/2 -translate-y-1/2 text-indigo-300 text-base transition-all peer-focus:top-3 peer-focus:text-xs peer-focus:text-lavender-500 peer-[:not(:placeholder-shown)]:top-3 peer-[:not(:placeholder-shown)]:text-xs"
           >
             {fields.email}
           </label>
@@ -99,18 +100,18 @@ export default function ContactForm({
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             required
             placeholder=" "
-            className="peer w-full px-4 pt-6 pb-2 border border-gold-200 rounded-sm text-base bg-white focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent resize-y"
+            className="peer w-full px-5 pt-6 pb-2 border border-lavender-200 rounded-xl text-base bg-white focus:outline-none focus:ring-2 focus:ring-lavender-400 focus:border-transparent transition-all duration-300 resize-y text-indigo-700"
           />
           <label
             htmlFor="contact-message"
-            className="absolute left-4 top-4 text-temple-400 text-base transition-all peer-focus:top-1 peer-focus:text-xs peer-focus:text-maroon-500 peer-[:not(:placeholder-shown)]:top-1 peer-[:not(:placeholder-shown)]:text-xs"
+            className="absolute left-5 top-4 text-indigo-300 text-base transition-all peer-focus:top-1 peer-focus:text-xs peer-focus:text-lavender-500 peer-[:not(:placeholder-shown)]:top-1 peer-[:not(:placeholder-shown)]:text-xs"
           >
             {fields.message}
           </label>
         </div>
         <button
           type="submit"
-          className="bg-maroon-500 text-white px-8 py-3 font-bold uppercase text-sm tracking-[0.125em] hover:bg-maroon-600 rounded-sm min-h-[56px]"
+          className="bg-lavender-500 text-white px-8 py-3.5 font-semibold text-sm tracking-wide hover:bg-lavender-600 rounded-xl btn-shimmer min-h-[52px] transition-colors duration-300"
         >
           {submitText}
         </button>

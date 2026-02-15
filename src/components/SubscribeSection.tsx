@@ -27,20 +27,22 @@ export default function SubscribeSection({
   }
 
   return (
-    <section className="py-16 bg-cream-200 lotus-bg">
-      <div className="max-w-xl mx-auto px-4 text-center">
-        <div className="text-gold-400/60 text-2xl mb-2">&#x2733;</div>
-        <h2 className="font-heading font-bold text-2xl md:text-3xl text-maroon-800 mb-3">
+    <section className="py-16 bg-lavender-50 lotus-bg">
+      <div className="max-w-xl mx-auto px-4 text-center reveal-on-scroll">
+        <div className="text-lavender-400/60 text-lg mb-2">&#10022;</div>
+        <h2 className="font-heading font-bold text-2xl md:text-3xl text-indigo-700 mb-3">
           {heading}
         </h2>
         <div className="sacred-divider" />
-        <p className="text-maroon-700/70 mb-8 mt-4">{description}</p>
+        <p className="text-indigo-400 mb-8 mt-4 font-light">{description}</p>
         {submitted ? (
-          <p className="text-maroon-500 font-semibold">
-            Thank you for subscribing!
-          </p>
+          <div className="bg-sage-50 border border-sage-200 rounded-2xl p-6 animate-scale-in">
+            <p className="text-sage-600 font-semibold">
+              Thank you for subscribing!
+            </p>
+          </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex gap-2">
+          <form onSubmit={handleSubmit} className="flex gap-3">
             <label htmlFor="subscribe-email" className="sr-only">
               {placeholder}
             </label>
@@ -51,11 +53,11 @@ export default function SubscribeSection({
               onChange={(e) => setEmail(e.target.value)}
               placeholder={placeholder}
               required
-              className="flex-1 px-4 py-3 bg-white border border-gold-200 rounded-sm text-base focus:outline-none focus:ring-2 focus:ring-gold-400"
+              className="flex-1 px-5 py-3.5 bg-white border border-lavender-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-lavender-400 focus:border-transparent transition-all duration-300 text-indigo-700 placeholder:text-indigo-300"
             />
             <button
               type="submit"
-              className="bg-maroon-500 text-white px-6 py-3 font-bold uppercase text-sm tracking-[0.125em] hover:bg-maroon-600 rounded-sm"
+              className="bg-lavender-500 text-white px-7 py-3.5 font-semibold text-sm tracking-wide hover:bg-lavender-600 rounded-xl btn-shimmer transition-colors duration-300"
             >
               {buttonText}
             </button>

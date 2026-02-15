@@ -18,12 +18,12 @@ export default function BooksPage() {
         backgroundImage="/images/guruji-pics/light-of-divinity.jpg"
       />
 
-      <section className="py-12 md:py-16 lotus-bg">
+      <section className="py-14 md:py-20 lotus-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-maroon-700/70 mb-10 max-w-2xl mx-auto">
+          <p className="text-center text-indigo-400 mb-12 max-w-2xl mx-auto font-light reveal-on-scroll">
             {booksData.description}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {booksData.books.map((book) => (
               <BookCard
                 key={book.title}
