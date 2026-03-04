@@ -55,7 +55,7 @@ export default function SchedulePage() {
             <div className="flex-1 w-full reveal-left">
               <div className="relative aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden sacred-glow">
                 <Image
-                  src={getImagePath("/images/guruji-pics/satsang-feb-26.webp")}
+                  src={getImagePath("/images/guruji-pics/satsang-mar-26.jpeg")}
                   alt="Monthly Satsang Poster"
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"

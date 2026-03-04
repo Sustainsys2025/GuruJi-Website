@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import HomeHero from "@/components/HomeHero";
+import FeaturedVideo from "@/components/FeaturedVideo";
 import SubscribeSection from "@/components/SubscribeSection";
 import homeData from "@/data/home.json";
 import siteData from "@/data/site.json";
@@ -72,49 +73,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Event of the Day */}
-      {featuredEvent && (
-        <section className="py-16 md:py-20 bg-cream-200/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10 reveal-on-scroll">
-              <div className="text-lavender-400/50 text-lg mb-2">&#10022;</div>
-              <h2 className="font-heading font-bold text-2xl md:text-3xl text-indigo-700">
-                Featured Gallery
-              </h2>
-              <div className="w-16 h-0.5 bg-gradient-to-r from-lavender-400 to-transparent mx-auto mt-3 rounded-full" />
-            </div>
-            <Link href={`/gallery/${featuredEvent.slug}`} className="group block reveal-scale">
-              <div className="relative rounded-3xl overflow-hidden sacred-glow aspect-[21/9]">
-                <Image
-                  src={getImagePath(featuredEvent.coverPhoto)}
-                  alt={featuredEvent.title}
-                  fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                  sizes="100vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/70 via-indigo-900/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-                  <span className="text-cream-200/80 text-xs font-semibold uppercase tracking-wider">
-                    {featuredEvent.date}
-                  </span>
-                  <h3 className="font-heading font-bold text-2xl md:text-3xl text-white mt-2 group-hover:text-lavender-200 transition-colors duration-300">
-                    {featuredEvent.title}
-                  </h3>
-                  <p className="text-cream-200/70 mt-2 text-sm font-light max-w-lg">
-                    {featuredEvent.description}
-                  </p>
-                  <span className="inline-flex items-center gap-2 mt-4 text-lavender-300 text-sm font-semibold group-hover:text-white transition-colors duration-300">
-                    View {featuredEvent.photos.length} photos
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </Link>
+      {/* Featured Satsang Video */}
+      <section className="py-16 md:py-20 bg-cream-200/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 reveal-on-scroll">
+            <div className="text-lavender-400/50 text-lg mb-2">&#10022;</div>
+            <h2 className="font-heading font-bold text-2xl md:text-3xl text-indigo-700">
+              Featured Satsang
+            </h2>
+            <div className="w-16 h-0.5 bg-gradient-to-r from-lavender-400 to-transparent mx-auto mt-3 rounded-full" />
           </div>
-        </section>
-      )}
+          <div className="reveal-scale">
+            <FeaturedVideo
+              src="/videos/feb-satsang-2026.mp4"
+              title="Feb26 - Maha ShivRatri Satsang"
+              date="February 2026"
+              description="Glimpses from the blessed Maha ShivRatri Satsang celebration."
+            />
+          </div>
+        </div>
+      </section>
 
       {/* CTA / Invitation */}
       <section className="py-20 relative overflow-hidden">

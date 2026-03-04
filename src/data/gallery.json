@@ -7,6 +7,32 @@
   "description": "Browse through our collection of photographs from various Satsangs and celebrations throughout the year.",
   "events": [
     {
+      "slug": "feb26-mahashivratri-satsang",
+      "title": "Feb26 - Maha ShivRatri Satsang",
+      "date": "February 2026",
+      "description": "The great night of Shiva observed with prayers, devotion, and community spirit.",
+      "folder": "feb26-mahashivratri",
+      "photos": [
+        "/images/gallery/feb26-mahashivratri/photo-1.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-2.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-3.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-4.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-5.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-6.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-7.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-8.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-9.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-10.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-11.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-12.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-13.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-14.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-15.jpg",
+        "/images/gallery/feb26-mahashivratri/photo-16.jpg"
+      ],
+      "coverPhoto": "/images/gallery/feb26-mahashivratri/photo-1.jpg"
+    },
+    {
       "slug": "jan26-new-year-satsang",
       "title": "Jan26 - New Year Satsang",
       "date": "January 2026",
