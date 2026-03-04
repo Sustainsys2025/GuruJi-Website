@@ -26,6 +26,7 @@
       "label": "GuruJi Gallary",
       "href": "/gallery",
       "children": [
+        { "label": "Feb26 - Maha ShivRatri Satsang", "href": "/gallery/feb26-mahashivratri-satsang" },
         { "label": "Jan26 - New Year Satsang", "href": "/gallery/jan26-new-year-satsang" },
         { "label": "Dec25 - X-Mas Satsang", "href": "/gallery/dec25-x-mas-satsang" },
         { "label": "Nov25 - GuruPurab Satsang", "href": "/gallery/nov25-gurupurab-satsang" },
