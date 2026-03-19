@@ -67,7 +67,7 @@ export default function Navbar({ links, siteName }: NavbarProps) {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative">
               <Image
-                src={getImagePath("/images/guruji-pics/guru-darshan.jpg")}
+                src={getImagePath("/images/guruji-pics/logo.png")}
                 alt={siteName}
                 width={42}
                 height={42}
