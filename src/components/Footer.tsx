@@ -45,6 +45,12 @@ export default function Footer({ siteName, socialLinks }: FooterProps) {
               </a>
             )}
             <Link
+              href="/privacy"
+              className="text-sm text-lavender-300 hover:text-white transition-colors duration-300 font-light tracking-wide"
+            >
+              Privacy Policy
+            </Link>
+            <Link
               href="/contact"
               className="text-sm text-lavender-300 hover:text-white transition-colors duration-300 font-light tracking-wide"
             >
