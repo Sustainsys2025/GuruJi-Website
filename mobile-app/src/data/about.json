@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "title": "About Us",
+    "subtitle": "Our Community & Our Journey",
+    "backgroundImage": "/images/guruji-pics/mandir-hall.jpg"
+  },
+  "sections": [
+    {
+      "heading": "Our Community",
+      "description": "We are a devoted group of families who have come together to form a spiritual community in the heart of Cambridgeshire. Our shared faith and devotion guide us as we walk the spiritual path together, supporting each other through life's journey.",
+      "imageSrc": "/images/guruji-pics/about-us.jpeg"
+    },
+    {
+      "heading": "Our Mission",
+      "description": "Our mission is to create a welcoming space where individuals and families can come together in devotion, share in spiritual teachings, and find peace through collective prayer and service. We strive to build a community rooted in love, compassion, and selfless service.",
+      "imageSrc": "/images/guruji-pics/guruji-saffron.webp"
+    },
+    {
+      "heading": "Our Gatherings",
+      "description": "We organize regular Satsangs and celebrations throughout the year, marking important spiritual occasions with devotion and joy. Each gathering is an opportunity to come together, share in the divine experience, and strengthen our bonds as a community.",
+      "imageSrc": "/images/guruji-pics/guruji-throne-white.jpg"
+    },
+    {
+      "heading": "Seva & Service",
+      "description": "Service is at the heart of our community. Our dedicated volunteers selflessly contribute their time and efforts to ensure every gathering runs smoothly. From preparing langar to organizing events, every act of seva is performed with love and devotion.",
+      "imageSrc": "/images/guruji-pics/red_photo.webp"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "Cambridge GuruJi Parivaar",
+  "tagline": "A Spiritual Community in Cambridgeshire",
+  "description": "A devoted community of families in Cambridgeshire, following the spiritual path and organizing regular Satsangs.",
+  "email": "info@gurujicambridge.example.com",
+  "phone": "+44 7000 000000",
+  "address": {
+    "line1": "Community Hall",
+    "line2": "Cambridge",
+    "city": "Cambridge",
+    "postcode": "CB2 1AA",
+    "country": "United Kingdom"
+  },
+  "socialLinks": {
+    "facebook": "https://www.facebook.com/share/g/18NnzNP2D2/?mibextid=wwXIfr",
+    "instagram": "https://www.instagram.com/gurujicambridgeparivar?igsh=MWRsZTlkZ3J0aG1zYw%3D%3D&utm_source=qr"
+  },
+  "coordinates": {
+    "lat": 52.2053,
+    "lng": 0.1218
+  },
+  "navLinks": [
+    { "label": "Home", "href": "/" },
+    { "label": "About Us", "href": "/about" },
+    { "label": "Satsang Schedule & Venue", "href": "/schedule" },
+    {
+      "label": "GuruJi Gallary",
+      "href": "/gallery",
+      "children": [
+        { "label": "Feb26 - Maha ShivRatri Satsang", "href": "/gallery/feb26-mahashivratri-satsang" },
+        { "label": "Jan26 - New Year Satsang", "href": "/gallery/jan26-new-year-satsang" },
+        { "label": "Dec25 - X-Mas Satsang", "href": "/gallery/dec25-x-mas-satsang" },
+        { "label": "Nov25 - GuruPurab Satsang", "href": "/gallery/nov25-gurupurab-satsang" },
+        { "label": "Oct25 - Diwali Satsang", "href": "/gallery/oct25-diwali-satsang" },
+        { "label": "Sep25 - Prakash Satsang", "href": "/gallery/sep25-prakash-satsang" },
+        { "label": "Aug25 - Rakhi Satsang", "href": "/gallery/aug25-rakhi-satsang" },
+        { "label": "Jul25 - BirthDay Satsang", "href": "/gallery/jul25-birthday-satsang" },
+        { "label": "Jun25 - Father's Day Satsang", "href": "/gallery/jun25-fathers-day-satsang" },
+        { "label": "Apr25 - Vaishakhi Satsang", "href": "/gallery/apr25-vaishakhi-satsang" },
+        { "label": "Mar25 - Holi Satsang", "href": "/gallery/mar25-holi-satsang" },
+        { "label": "Feb25 - MahaShivratri Satsang", "href": "/gallery/feb25-mahashivratri-satsang" },
+        { "label": "Jan25 - New Year Satsang", "href": "/gallery/jan25-new-year-satsang" },
+        { "label": "Photo Gallery", "href": "/gallery" },
+        { "label": "Books & Guides", "href": "/books" }
+      ]
+    },
+    { "label": "Contact Us", "href": "/contact" }
+  ],
+  "announcement": {
+    "text": "Click for Latest Satsang and Schedule",
+    "href": "/schedule"
+  }
+}

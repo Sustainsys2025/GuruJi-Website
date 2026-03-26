@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "GuruJi Cambridge",
+    "slug": "guruji-cambridge",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "gurujicambridge",
+    "newArchEnabled": false,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#fff7e6"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gurujicambridge.app",
+      "buildNumber": "4",
+      "infoPlist": {
+        "CFBundleDisplayName": "GuruJi Cambridge",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "privacyManifests": {
+        "NSPrivacyAccessedAPITypes": []
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#fff7e6"
+      },
+      "package": "com.gurujicambridge.app",
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-asset"
+    ],
+    "extra": {
+      "privacyUrl": "https://gurujicambridge.com/privacy",
+      "termsUrl": "https://gurujicambridge.com/terms",
+      "supportUrl": "https://gurujicambridge.com/contact",
+      "marketingUrl": "https://gurujicambridge.com",
+      "eas": {
+        "projectId": "d81c940e-51b7-418e-bd10-1f46e7c7828a"
+      }
+    },
+    "owner": "suatsinsysai"
+  }
+}

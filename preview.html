@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GuruJi Cambridge - Redesign Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --lavender-50:#f8f6fc; --lavender-100:#ede8f7; --lavender-200:#ddd4f0;
+  --lavender-300:#c4b3e3; --lavender-400:#a78bcd; --lavender-500:#8b6bb5;
+  --lavender-600:#7552a0; --lavender-700:#5e4183;
+  --sage-50:#f4f7f4; --sage-100:#e4ece4; --sage-200:#c9d9c7;
+  --sage-300:#a3bfa0; --sage-400:#7da378;
+  --cream-50:#fdfcfa; --cream-100:#faf7f2; --cream-200:#f5f0e8; --cream-300:#ede4d6;
+  --gold-50:#fdfaf0; --gold-100:#f9f0d4; --gold-200:#f0dfa3; --gold-300:#e5ca6e;
+  --gold-400:#d4a840; --gold-500:#b8902a;
+  --indigo-50:#f0f0f5; --indigo-100:#dddde8; --indigo-200:#b5b5ce;
+  --indigo-300:#8888ab; --indigo-400:#5f5f85; --indigo-500:#3d3d60;
+  --indigo-600:#2d2d48; --indigo-700:#1e1e32; --indigo-800:#14142a;
+  --rose-100:#fbe8e8; --rose-200:#f4cbcb; --rose-300:#e8a3a3;
+  --temple-300:#c9b99e; --temple-400:#a89070;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Nunito',sans-serif;
+  color:var(--indigo-700);
+  background:var(--cream-50);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a { text-decoration:none; transition:all .4s cubic-bezier(.4,0,.2,1); }
+img { max-width:100%; display:block; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width:8px; }
+::-webkit-scrollbar-track { background:var(--cream-100); }
+::-webkit-scrollbar-thumb { background:var(--lavender-300); border-radius:4px; }
+::-webkit-scrollbar-thumb:hover { background:var(--lavender-400); }
+
+/* Announcement Banner */
+.announcement {
+  background:linear-gradient(90deg,var(--lavender-600),var(--lavender-500),var(--lavender-600));
+  color:#fff; text-align:center; padding:10px 16px; font-size:14px; letter-spacing:.5px;
+}
+.announcement a { color:#fff; font-weight:300; }
+.announcement a:hover { color:var(--gold-200); }
+.announcement .star { color:rgba(229,202,110,.6); font-size:11px; }
+
+/* Navbar */
+.navbar {
+  position:sticky; top:0; z-index:50;
+  background:rgba(253,252,250,.85); backdrop-filter:blur(12px);
+  transition:all .5s cubic-bezier(.4,0,.2,1);
+}
+.navbar.scrolled { background:rgba(253,252,250,.95); box-shadow:0 1px 3px rgba(0,0,0,.05); }
+.navbar::after {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:1px;
+  background:linear-gradient(90deg,transparent,rgba(221,212,240,.5),transparent);
+}
+.nav-inner { max-width:1280px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
+.logo { display:flex; align-items:center; gap:12px; }
+.logo img { width:42px; height:42px; border-radius:50%; box-shadow:0 1px 3px rgba(0,0,0,.1); border:2px solid rgba(221,212,240,.6); }
+.logo span { font-family:'Cormorant Garamond',serif; font-weight:600; color:var(--indigo-700); font-size:18px; letter-spacing:.5px; }
+.nav-links { display:flex; gap:4px; }
+.nav-links a {
+  padding:8px 14px; font-size:14px; font-weight:600; letter-spacing:.3px; color:var(--indigo-600);
+  border-radius:999px; transition:all .3s;
+}
+.nav-links a:hover, .nav-links a.active { color:var(--lavender-600); background:var(--lavender-50); }
+
+/* Hero */
+.hero {
+  position:relative; min-height:75vh; display:flex; align-items:center; justify-content:center;
+  color:#fff; overflow:hidden;
+}
+.hero-bg {
+  position:absolute; inset:0; top:-15%; bottom:-15%;
+  background:linear-gradient(135deg,var(--indigo-700) 0%,var(--lavender-700) 50%,var(--indigo-800) 100%);
+}
+.hero-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(30,30,50,.5) 0%,rgba(30,30,50,.3) 40%,rgba(30,30,50,.6) 100%);
+}
+.hero-orb1 {
+  position:absolute; top:25%; left:15%; width:256px; height:256px;
+  background:rgba(167,139,205,.06); border-radius:50%; filter:blur(60px);
+  animation:breathe 4s ease-in-out infinite;
+}
+.hero-orb2 {
+  position:absolute; bottom:25%; right:15%; width:192px; height:192px;
+  background:rgba(229,202,110,.05); border-radius:50%; filter:blur(60px);
+  animation:breathe 4s ease-in-out infinite .5s;
+}
+.hero-curve {
+  position:absolute; bottom:0; left:0; right:0; z-index:2;
+}
+.hero-content {
+  position:relative; z-index:10; text-align:center; padding:0 20px; max-width:720px;
+  animation:fadeInUp .8s cubic-bezier(.4,0,.2,1) both;
+}
+.hero-star { color:rgba(229,202,110,.5); font-size:24px; margin-bottom:12px; animation:float 6s ease-in-out infinite; }
+.hero h1 { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:clamp(32px,5vw,60px); line-height:1.15; text-shadow:0 2px 20px rgba(0,0,0,.3); }
+.sacred-divider { width:60px; height:2px; background:linear-gradient(90deg,transparent,var(--gold-300),transparent); margin:16px auto; border-radius:1px; }
+.hero p { margin-top:16px; font-size:clamp(16px,2.5vw,20px); color:rgba(245,240,232,.9); font-weight:300; letter-spacing:.5px; }
+
+/* Quote Section */
+.quote-section { padding:48px 0 56px; }
+.quote-card {
+  max-width:720px; margin:0 auto; padding:32px 40px;
+  background:rgba(248,246,252,.5); border:1px solid rgba(237,232,247,.4);
+  border-radius:24px; text-align:center;
+  box-shadow:0 8px 40px rgba(167,139,205,.12),0 2px 12px rgba(212,168,64,.06);
+}
+.quote-card blockquote {
+  font-family:'Cormorant Garamond',serif; font-size:clamp(18px,2.5vw,24px);
+  color:var(--indigo-600); font-style:italic; line-height:1.6;
+}
+.quote-label { color:var(--lavender-500); font-size:13px; font-weight:300; letter-spacing:2px; text-transform:uppercase; margin-top:12px; }
+
+/* Content Sections */
+.section { padding:64px 0 80px; }
+.section.alt { background:rgba(245,240,232,.5); }
+.section-inner { max-width:1280px; margin:0 auto; padding:0 24px; }
+.section-flex { display:flex; gap:64px; align-items:center; flex-wrap:wrap; }
+.section-flex > * { flex:1; min-width:300px; }
+.section-star { color:rgba(167,139,205,.5); font-size:16px; margin-bottom:8px; }
+.section h2 { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:clamp(22px,3vw,30px); color:var(--indigo-700); margin-bottom:16px; }
+.section-line { width:64px; height:2px; background:linear-gradient(90deg,var(--lavender-400),transparent); border-radius:1px; margin-bottom:24px; }
+.section p { color:var(--indigo-400); line-height:1.7; font-size:16px; }
+.section-img {
+  border-radius:16px; overflow:hidden;
+  box-shadow:0 8px 40px rgba(167,139,205,.12),0 2px 12px rgba(212,168,64,.06);
+  position:relative;
+}
+.section-img img { transition:transform .7s cubic-bezier(.4,0,.2,1); }
+.section-img:hover img { transform:scale(1.05); }
+.section-img::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(to top,rgba(30,30,50,.1),transparent);
+}
+
+/* Featured Gallery */
+.featured { padding:64px 0 80px; background:rgba(245,240,232,.5); }
+.featured-inner { max-width:1280px; margin:0 auto; padding:0 24px; }
+.featured-heading { text-align:center; margin-bottom:40px; }
+.featured-heading h2 { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:clamp(22px,3vw,30px); color:var(--indigo-700); }
+.featured-card {
+  position:relative; border-radius:24px; overflow:hidden; aspect-ratio:21/9;
+  box-shadow:0 8px 40px rgba(167,139,205,.12);
+  cursor:pointer;
+}
+.featured-card img { width:100%; height:100%; object-fit:cover; transition:transform 1s cubic-bezier(.4,0,.2,1); }
+.featured-card:hover img { transform:scale(1.05); }
+.featured-card .overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to top,rgba(30,30,50,.7),rgba(30,30,50,.2),transparent);
+}
+.featured-card .info { position:absolute; bottom:0; left:0; right:0; padding:24px 40px; }
+.featured-card .date { color:rgba(245,240,232,.8); font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:1.5px; }
+.featured-card h3 { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:clamp(20px,3vw,30px); color:#fff; margin-top:8px; }
+.featured-card .desc { color:rgba(245,240,232,.7); margin-top:8px; font-size:14px; font-weight:300; max-width:500px; }
+.featured-card .view-link { display:inline-flex; align-items:center; gap:8px; color:var(--lavender-300); font-size:14px; font-weight:600; margin-top:16px; }
+
+/* CTA Section */
+.cta {
+  position:relative; padding:80px 0; overflow:hidden; color:#fff; text-align:center;
+  background:linear-gradient(135deg,var(--indigo-800),var(--indigo-700),var(--lavender-700));
+}
+.cta-orb1 { position:absolute; top:33%; left:10%; width:192px; height:192px; background:rgba(167,139,205,.06); border-radius:50%; filter:blur(60px); }
+.cta-orb2 { position:absolute; bottom:33%; right:10%; width:256px; height:256px; background:rgba(229,202,110,.05); border-radius:50%; filter:blur(60px); }
+.cta-content { position:relative; z-index:10; max-width:720px; margin:0 auto; padding:0 20px; }
+.cta h2 { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:clamp(22px,3vw,36px); line-height:1.4; }
+.cta p { margin-top:20px; color:rgba(245,240,232,.8); font-size:18px; font-weight:300; line-height:1.7; }
+.cta .social { margin-top:32px; display:inline-flex; align-items:center; gap:12px; color:var(--lavender-300); transition:color .3s; }
+.cta .social:hover { color:#fff; }
+.cta .social svg { transition:transform .3s; }
+.cta .social:hover svg { transform:scale(1.1); }
+
+/* Subscribe */
+.subscribe { padding:64px 0; background:var(--lavender-50); }
+.subscribe-inner { max-width:560px; margin:0 auto; padding:0 20px; text-align:center; }
+.subscribe h2 { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:clamp(22px,3vw,30px); color:var(--indigo-700); margin-bottom:12px; }
+.subscribe p { color:var(--indigo-400); font-weight:300; margin-top:16px; margin-bottom:32px; }
+.subscribe form { display:flex; gap:12px; }
+.subscribe input {
+  flex:1; padding:14px 20px; background:#fff; border:1px solid var(--lavender-200);
+  border-radius:12px; font-size:16px; color:var(--indigo-700); outline:none;
+  transition:all .3s; font-family:'Nunito',sans-serif;
+}
+.subscribe input:focus { border-color:transparent; box-shadow:0 0 0 2px var(--lavender-400); }
+.subscribe input::placeholder { color:var(--indigo-300); }
+.subscribe button {
+  padding:14px 28px; background:var(--lavender-500); color:#fff; border:none;
+  border-radius:12px; font-weight:600; font-size:14px; letter-spacing:.3px;
+  cursor:pointer; transition:background .3s; font-family:'Nunito',sans-serif;
+  position:relative; overflow:hidden;
+}
+.subscribe button:hover { background:var(--lavender-600); }
+
+/* Footer */
+.footer { background:var(--indigo-800); color:#fff; position:relative; }
+.footer-line { height:1px; background:linear-gradient(90deg,transparent,rgba(167,139,205,.3),transparent); }
+.footer-inner { max-width:1280px; margin:0 auto; padding:40px 24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px; }
+.footer-brand { font-family:'Cormorant Garamond',serif; font-weight:600; color:var(--cream-200); font-size:20px; letter-spacing:.5px; }
+.footer-copy { color:var(--indigo-300); font-size:14px; font-weight:300; margin-top:8px; }
+.footer-links { display:flex; align-items:center; gap:24px; }
+.footer-links a { color:var(--lavender-300); font-size:14px; font-weight:300; letter-spacing:.3px; transition:color .3s; }
+.footer-links a:hover { color:#fff; }
+.footer-links .social-icon {
+  display:flex; align-items:center; justify-content:center;
+  width:36px; height:36px; border-radius:50%; transition:all .3s;
+}
+.footer-links .social-icon:hover { background:rgba(117,82,160,.2); }
+
+/* Gallery Grid */
+.gallery-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:32px; }
+.gallery-card {
+  border-radius:16px; overflow:hidden; background:var(--cream-50);
+  border:1px solid rgba(237,232,247,.3); transition:transform .4s cubic-bezier(.4,0,.2,1), box-shadow .4s;
+}
+.gallery-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(167,139,205,.12),0 4px 16px rgba(0,0,0,.04); }
+.gallery-card .img-wrap { aspect-ratio:4/3; overflow:hidden; position:relative; }
+.gallery-card img { width:100%; height:100%; object-fit:cover; transition:transform .7s cubic-bezier(.4,0,.2,1); }
+.gallery-card:hover img { transform:scale(1.05); }
+.gallery-card .img-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(30,30,50,.5),transparent); opacity:.8; transition:opacity .5s; }
+.gallery-card:hover .img-overlay { opacity:.6; }
+.gallery-card .img-date { position:absolute; bottom:16px; left:16px; color:rgba(245,240,232,.9); font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:1.5px; }
+.gallery-card .card-body { padding:20px; }
+.gallery-card h3 { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:18px; color:var(--indigo-700); transition:color .3s; }
+.gallery-card:hover h3 { color:var(--lavender-600); }
+.gallery-card .card-desc { color:var(--indigo-400); font-size:14px; margin-top:6px; font-weight:300; line-height:1.5; }
+.gallery-card .photo-count { color:var(--lavender-500); font-size:12px; font-weight:600; margin-top:12px; }
+
+/* Animations */
+@keyframes fadeInUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+@keyframes breathe { 0%,100%{opacity:.4} 50%{opacity:.8} }
+@keyframes scaleIn { from{opacity:0;transform:scale(.95)} to{opacity:1;transform:scale(1)} }
+
+/* Reveal on scroll */
+.reveal { opacity:0; transform:translateY(30px); transition:opacity .8s cubic-bezier(.4,0,.2,1), transform .8s cubic-bezier(.4,0,.2,1); }
+.reveal.visible { opacity:1; transform:translateY(0); }
+.reveal-left { opacity:0; transform:translateX(-40px); transition:opacity .8s cubic-bezier(.4,0,.2,1), transform .8s cubic-bezier(.4,0,.2,1); }
+.reveal-left.visible { opacity:1; transform:translateX(0); }
+.reveal-right { opacity:0; transform:translateX(40px); transition:opacity .8s cubic-bezier(.4,0,.2,1), transform .8s cubic-bezier(.4,0,.2,1); }
+.reveal-right.visible { opacity:1; transform:translateX(0); }
+
+/* Responsive */
+@media(max-width:768px) {
+  .section-flex { gap:32px; }
+  .section-flex > * { min-width:100%; }
+  .nav-links { display:none; }
+  .featured-card { aspect-ratio:16/9; }
+  .featured-card .info { padding:16px 20px; }
+  .subscribe form { flex-direction:column; }
+}
+</style>
+</head>
+<body>
+
+<!-- Announcement Banner -->
+<div class="announcement">
+  <a href="/schedule"><span class="star">&#10022;</span> Next Monthly Satsang — Check Schedule <span class="star">&#10022;</span></a>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <nav class="nav-inner">
+    <a href="#" class="logo">
+      <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=84&h=84&fit=crop&crop=face" alt="GuruJi">
+      <span>Guruji Cambridge</span>
+    </a>
+    <div class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Gallery</a>
+      <a href="#">Schedule</a>
+      <a href="#">Books</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg" id="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-orb1"></div>
+  <div class="hero-orb2"></div>
+  <div class="hero-curve">
+    <svg viewBox="0 0 1440 60" fill="none" width="100%" preserveAspectRatio="none">
+      <path d="M0 60L1440 60L1440 0C1440 0 1080 50 720 50C360 50 0 0 0 0L0 60Z" fill="var(--cream-50)"/>
+    </svg>
+  </div>
+  <div class="hero-content">
+    <div class="hero-star">&#10022;</div>
+    <h1>Jai Guruji, Shukrana Guruji</h1>
+    <div class="sacred-divider"></div>
+    <p>Embracing Divine Blessings in Cambridgeshire</p>
+  </div>
+</section>
+
+<!-- Quote of the Day -->
+<section class="quote-section">
+  <div class="quote-card reveal">
+    <div style="color:rgba(212,168,64,.4);font-size:16px;margin-bottom:12px">&#10022;</div>
+    <blockquote>&ldquo;Where there is devotion, there is no distance between the soul and the divine.&rdquo;</blockquote>
+    <div class="sacred-divider"></div>
+    <p class="quote-label">Spiritual Inspiration</p>
+  </div>
+</section>
+
+<!-- Who Are We -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-flex">
+      <div class="reveal-left">
+        <div class="section-star">&#10022;</div>
+        <h2>Who Are We</h2>
+        <div class="section-line"></div>
+        <p>We are a devotional community in Cambridgeshire, united by faith and love for Guruji. Our community has grown organically through shared devotion, regular Satsangs, and a deep commitment to spiritual growth and service.</p>
+      </div>
+      <div class="section-img reveal-right">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&h=400&fit=crop" alt="Light of Divinity" style="width:100%;aspect-ratio:7/4;object-fit:cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Gallery -->
+<section class="featured">
+  <div class="featured-inner">
+    <div class="featured-heading reveal">
+      <div class="section-star">&#10022;</div>
+      <h2>Featured Gallery</h2>
+      <div class="section-line" style="margin:12px auto 0"></div>
+    </div>
+    <div class="featured-card reveal" style="animation-delay:.15s">
+      <img src="https://images.unsplash.com/photo-1604608672516-f1b9b1d37076?w=1400&h=600&fit=crop" alt="Featured Event">
+      <div class="overlay"></div>
+      <div class="info">
+        <div class="date">January 2026</div>
+        <h3>Monthly Satsang - January Gathering</h3>
+        <div class="desc">A blessed gathering of devotees coming together in prayer and celebration at Caxton Village Hall.</div>
+        <div class="view-link">
+          View 12 photos
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Grid Preview -->
+<section class="section">
+  <div class="section-inner">
+    <div class="featured-heading reveal">
+      <div class="section-star">&#10022;</div>
+      <h2>Photo Gallery</h2>
+      <div class="section-line" style="margin:12px auto 0"></div>
+    </div>
+    <div style="margin-top:40px"></div>
+    <div class="gallery-grid">
+      <div class="gallery-card reveal" style="transition-delay:.1s">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&h=300&fit=crop" alt="Satsang">
+          <div class="img-overlay"></div>
+          <div class="img-date">Dec 2025</div>
+        </div>
+        <div class="card-body">
+          <h3>December Satsang Celebration</h3>
+          <p class="card-desc">A beautiful evening of devotion and spiritual gathering.</p>
+          <p class="photo-count">&#128247; 15 photos</p>
+        </div>
+      </div>
+      <div class="gallery-card reveal" style="transition-delay:.2s">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=400&h=300&fit=crop" alt="Diwali">
+          <div class="img-overlay"></div>
+          <div class="img-date">Nov 2025</div>
+        </div>
+        <div class="card-body">
+          <h3>Diwali Celebrations</h3>
+          <p class="card-desc">Festival of lights celebrated with the community.</p>
+          <p class="photo-count">&#128247; 22 photos</p>
+        </div>
+      </div>
+      <div class="gallery-card reveal" style="transition-delay:.3s">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1604608672516-f1b9b1d37076?w=400&h=300&fit=crop" alt="Special">
+          <div class="img-overlay"></div>
+          <div class="img-date">Oct 2025</div>
+        </div>
+        <div class="card-body">
+          <h3>Navratri Special Satsang</h3>
+          <p class="card-desc">Nine nights of devotion and spiritual celebration.</p>
+          <p class="photo-count">&#128247; 18 photos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-orb1"></div>
+  <div class="cta-orb2"></div>
+  <div class="cta-content reveal">
+    <div class="hero-star" style="color:rgba(229,202,110,.4)">&#10022;</div>
+    <h2>Join Us on This Sacred Journey</h2>
+    <div class="sacred-divider"></div>
+    <p>Connect with our growing community. Follow us for updates on upcoming gatherings and celebrations.</p>
+    <a href="#" class="social">
+      <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+      <span style="font-size:14px;font-weight:300;letter-spacing:.3px">Follow us on Facebook</span>
+    </a>
+  </div>
+</section>
+
+<!-- Subscribe -->
+<section class="subscribe">
+  <div class="subscribe-inner reveal">
+    <div style="color:rgba(167,139,205,.6);font-size:16px;margin-bottom:8px">&#10022;</div>
+    <h2>Stay Connected</h2>
+    <div class="sacred-divider"></div>
+    <p>Receive updates on upcoming Satsangs, celebrations, and community news.</p>
+    <form onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--sage-600);font-weight:600;padding:16px\'>Thank you for subscribing!</p>'">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Guruji Cambridge</div>
+      <div class="footer-copy">&copy; 2026 Guruji Cambridge &mdash; All Rights Reserved.</div>
+    </div>
+    <div class="footer-links">
+      <a href="#" class="social-icon" style="color:var(--lavender-300)">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+      </a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Scroll effects
+const navbar = document.getElementById('navbar');
+const heroBg = document.getElementById('hero-bg');
+
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  // Navbar shadow
+  navbar.classList.toggle('scrolled', y > 20);
+  // Parallax
+  if (heroBg) heroBg.style.transform = `translateY(${y * 0.3}px)`;
+}, { passive: true });
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

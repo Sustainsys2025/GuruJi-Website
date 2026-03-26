@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "title": "Books & Guides",
+    "subtitle": "Spiritual literature and teachings",
+    "backgroundImage": "/images/guruji-pics/light-of-divinity.jpg"
+  },
+  "description": "Explore our collection of spiritual books and guides. These resources offer profound insights and teachings to guide you on your spiritual journey.",
+  "books": [
+    {
+      "title": "Divine Experiences",
+      "description": "A collection of divine experiences shared by devoted followers.",
+      "type": "PDF",
+      "colorPlaceholder": "#800020"
+    },
+    {
+      "title": "The Divine Light",
+      "description": "Illuminating teachings that guide the path of spiritual seekers.",
+      "type": "PDF",
+      "colorPlaceholder": "#6B4226"
+    },
+    {
+      "title": "Surcharged with Divine Love",
+      "description": "Stories and teachings filled with the essence of divine love.",
+      "type": "PDF",
+      "colorPlaceholder": "#8B4513"
+    },
+    {
+      "title": "Sacred Scriptures Guide",
+      "description": "A comprehensive guide to understanding sacred scriptures.",
+      "type": "PDF",
+      "colorPlaceholder": "#5C3A21"
+    },
+    {
+      "title": "Light of Divinity",
+      "description": "Spiritual wisdom in Hindi for devoted seekers.",
+      "type": "PDF",
+      "colorPlaceholder": "#7A0020"
+    },
+    {
+      "title": "Golden Words",
+      "description": "Precious teachings and guidance from the spiritual master.",
+      "type": "PDF",
+      "colorPlaceholder": "#B8860B"
+    },
+    {
+      "title": "The Flowers of Gratitude",
+      "description": "Expressions of gratitude and devotion from the community.",
+      "type": "PDF",
+      "colorPlaceholder": "#9B2335"
+    },
+    {
+      "title": "My Father - A Memoir",
+      "description": "A heartfelt memoir sharing personal memories and teachings.",
+      "type": "PDF",
+      "colorPlaceholder": "#6B3A2A"
+    },
+    {
+      "title": "Path of Devotion",
+      "description": "A guide to walking the path of devotion with faith and love.",
+      "type": "PDF",
+      "colorPlaceholder": "#704214"
+    }
+  ]
+}
