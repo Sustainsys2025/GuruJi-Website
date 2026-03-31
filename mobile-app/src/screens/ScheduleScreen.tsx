@@ -37,7 +37,7 @@ export default function ScheduleScreen() {
       <View style={styles.section}>
         <SectionHeading title="Latest Satsang" />
         <Image
-          source={{ uri: getImageUrl('/images/guruji-pics/satsang-mar-26.jpeg') }}
+          source={{ uri: getImageUrl('/images/guruji-pics/satsang-apr-26.jpg') }}
           style={styles.poster}
           contentFit="cover"
           transition={300}
