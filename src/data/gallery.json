@@ -7,6 +7,27 @@
   "description": "Browse through our collection of photographs from various Satsangs and celebrations throughout the year.",
   "events": [
     {
+      "slug": "mar26-guruji-satsang",
+      "title": "Mar26 - GuruJi Satsang",
+      "date": "March 2026",
+      "description": "Monthly GuruJi Satsang gathering with the community.",
+      "folder": "mar26-satsang",
+      "photos": [
+        "/images/gallery/mar26-satsang/photo-1.jpg",
+        "/images/gallery/mar26-satsang/photo-2.jpg",
+        "/images/gallery/mar26-satsang/photo-3.jpg",
+        "/images/gallery/mar26-satsang/photo-4.jpg",
+        "/images/gallery/mar26-satsang/photo-5.jpg",
+        "/images/gallery/mar26-satsang/photo-6.jpg",
+        "/images/gallery/mar26-satsang/photo-7.jpg",
+        "/images/gallery/mar26-satsang/photo-8.jpg",
+        "/images/gallery/mar26-satsang/photo-9.jpg",
+        "/images/gallery/mar26-satsang/photo-10.jpg",
+        "/images/gallery/mar26-satsang/photo-11.jpg"
+      ],
+      "coverPhoto": "/images/gallery/mar26-satsang/photo-1.jpg"
+    },
+    {
       "slug": "feb26-mahashivratri-satsang",
       "title": "Feb26 - Maha ShivRatri Satsang",
       "date": "February 2026",
