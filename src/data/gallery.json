@@ -7,6 +7,28 @@
   "description": "Browse through our collection of photographs from various Satsangs and celebrations throughout the year.",
   "events": [
     {
+      "slug": "may26-mahasamadhi-satsang",
+      "title": "May26 - MahaSamadhi Satsang",
+      "date": "May 2026",
+      "description": "Monthly GuruJi Satsang gathering with the community.",
+      "folder": "may26-mahasamadhi",
+      "photos": [
+        "/images/gallery/may26-mahasamadhi/photo-1.jpg",
+        "/images/gallery/may26-mahasamadhi/photo-2.jpg",
+        "/images/gallery/may26-mahasamadhi/photo-3.jpg",
+        "/images/gallery/may26-mahasamadhi/photo-4.jpg",
+        "/images/gallery/may26-mahasamadhi/photo-5.jpg",
+        "/images/gallery/may26-mahasamadhi/photo-6.jpg",
+        "/images/gallery/may26-mahasamadhi/photo-7.jpg",
+        "/images/gallery/may26-mahasamadhi/photo-8.jpg",
+        "/images/gallery/may26-mahasamadhi/photo-9.jpg",
+        "/images/gallery/may26-mahasamadhi/photo-10.jpg",
+        "/images/gallery/may26-mahasamadhi/photo-11.jpg",
+        "/images/gallery/may26-mahasamadhi/photo-12.jpg"
+      ],
+      "coverPhoto": "/images/gallery/may26-mahasamadhi/photo-1.jpg"
+    },
+    {
       "slug": "apr26-vaishakhi-satsang",
       "title": "Apr26 - Vaishakhi Satsang",
       "date": "April 2026",
