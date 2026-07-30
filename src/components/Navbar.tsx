@@ -83,30 +83,40 @@ export default function Navbar({ links, siteName }: NavbarProps) {
             {links.map((link) =>
               link.children ? (
                 <div key={link.label} className="relative">
-                  <button
-                    onClick={() =>
-                      setDropdownOpen(dropdownOpen === link.label ? null : link.label)
-                    }
-                    className={`px-3 py-2 text-sm font-semibold tracking-wide flex items-center gap-1 rounded-full transition-all duration-300 ${
+                  <div
+                    className={`flex items-center rounded-full transition-all duration-300 ${
                       pathname.startsWith(link.href)
                         ? "text-lavender-600 bg-lavender-50"
                         : "text-indigo-600 hover:text-lavender-600 hover:bg-lavender-50/50"
                     }`}
-                    aria-expanded={dropdownOpen === link.label}
-                    aria-haspopup="true"
                   >
-                    {link.label}
-                    <svg
-                      className={`w-3 h-3 transition-transform duration-300 ${
-                        dropdownOpen === link.label ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                    <Link
+                      href={link.href}
+                      className="px-3 py-2 text-sm font-semibold tracking-wide transition-colors duration-300"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
+                      {link.label}
+                    </Link>
+                    <button
+                      onClick={() =>
+                        setDropdownOpen(dropdownOpen === link.label ? null : link.label)
+                      }
+                      className="pr-3 py-2 -ml-1 transition-colors duration-300"
+                      aria-expanded={dropdownOpen === link.label}
+                      aria-haspopup="true"
+                      aria-label="Toggle gallery dropdown"
+                    >
+                      <svg
+                        className={`w-3 h-3 transition-transform duration-300 ${
+                          dropdownOpen === link.label ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
                   {dropdownOpen === link.label && (
                     <div className="absolute top-full left-0 mt-2 w-72 bg-cream-50/95 backdrop-blur-md shadow-lg rounded-2xl py-2 z-50 border border-lavender-100/50 animate-fade-in">
                       {link.children.map((child) => (
@@ -176,18 +186,26 @@ export default function Navbar({ links, siteName }: NavbarProps) {
             {links.map((link) =>
               link.children ? (
                 <div key={link.label}>
-                  <button
-                    onClick={() =>
-                      setDropdownOpen(dropdownOpen === link.label ? null : link.label)
-                    }
-                    className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-indigo-600 rounded-xl hover:bg-lavender-50/50 transition-all duration-300"
-                    aria-expanded={dropdownOpen === link.label}
-                  >
-                    {link.label}
-                    <svg className={`w-3 h-3 transition-transform duration-300 ${dropdownOpen === link.label ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
+                  <div className="flex items-center justify-between px-4 py-3 rounded-xl hover:bg-lavender-50/50 transition-all duration-300">
+                    <Link
+                      href={link.href}
+                      className="text-sm font-semibold text-indigo-600 transition-colors duration-300"
+                    >
+                      {link.label}
+                    </Link>
+                    <button
+                      onClick={() =>
+                        setDropdownOpen(dropdownOpen === link.label ? null : link.label)
+                      }
+                      className="p-1 text-indigo-600"
+                      aria-expanded={dropdownOpen === link.label}
+                      aria-label="Toggle gallery dropdown"
+                    >
+                      <svg className={`w-3 h-3 transition-transform duration-300 ${dropdownOpen === link.label ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
                   <div className={`overflow-hidden transition-all duration-300 ${dropdownOpen === link.label ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
                     <div className="bg-lavender-50/30 rounded-xl ml-4 py-1">
                       {link.children.map((child) => (
