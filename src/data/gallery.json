@@ -7,6 +7,25 @@
   "description": "Browse through our collection of photographs from various Satsangs and celebrations throughout the year.",
   "events": [
     {
+      "slug": "jul26-birthday-satsang",
+      "title": "Jul26 - Birthday Satsang",
+      "date": "July 2026",
+      "description": "A special birthday celebration Satsang with the community.",
+      "folder": "jul26-birthday-satsang",
+      "photos": [
+        "/images/gallery/jul26-birthday-satsang/photo-1.jpg",
+        "/images/gallery/jul26-birthday-satsang/photo-2.jpg",
+        "/images/gallery/jul26-birthday-satsang/photo-3.jpg",
+        "/images/gallery/jul26-birthday-satsang/photo-4.jpg",
+        "/images/gallery/jul26-birthday-satsang/photo-5.jpg",
+        "/images/gallery/jul26-birthday-satsang/photo-6.jpg",
+        "/images/gallery/jul26-birthday-satsang/photo-7.jpg",
+        "/images/gallery/jul26-birthday-satsang/photo-8.jpg",
+        "/images/gallery/jul26-birthday-satsang/photo-9.jpg"
+      ],
+      "coverPhoto": "/images/gallery/jul26-birthday-satsang/photo-1.jpg"
+    },
+    {
       "slug": "jun26-guruji-satsang",
       "title": "Jun26 - GuruJi Satsang",
       "date": "June 2026",
