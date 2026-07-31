@@ -55,7 +55,7 @@ export default function HomeHero({ title, subtitle }: HomeHeroProps) {
       </div>
 
       {/* Flying butterflies — hero only, above navbar */}
-      <FlyingButterflies count={8} minSize={28} maxSize={100} speed={0.5} variants={["monarch", "saffron", "sulphur", "azure", "rose", "jade", "dusk"]} zIndex={55} />
+      <FlyingButterflies count={4} minSize={28} maxSize={100} speed={0.5} variants={["monarch", "saffron", "sulphur", "azure", "rose", "jade", "dusk"]} zIndex={55} />
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-8">
