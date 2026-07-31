@@ -65,10 +65,14 @@ export default function FlyingButterflies({
     if (!host) return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const isMobile = window.innerWidth < 768;
+    const actualCount = isMobile ? Math.max(2, Math.ceil(count / 2)) : count;
+    const actualMinSize = isMobile ? Math.round(minSize * 0.7) : minSize;
+    const actualMaxSize = isMobile ? Math.round(maxSize * 0.65) : maxSize;
 
     const bugs: Bug[] = [];
-    for (let i = 0; i < count; i++) {
-      const span = rand(minSize, maxSize);
+    for (let i = 0; i < actualCount; i++) {
+      const span = rand(actualMinSize, actualMaxSize);
       const el = document.createElement("div");
       el.style.position = "absolute";
       el.style.top = "0";
@@ -119,7 +123,7 @@ export default function FlyingButterflies({
       host.appendChild(el);
 
       const initAngle = rand(0, Math.PI * 2);
-      const baseSpeed = rand(0.025, 0.06) * (1 / (0.6 + span / maxSize));
+      const baseSpeed = rand(0.025, 0.06) * (1 / (0.6 + span / actualMaxSize));
 
       bugs.push({
         el,

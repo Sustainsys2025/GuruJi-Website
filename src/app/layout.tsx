@@ -43,8 +43,8 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col">
         <ScrollRevealProvider />
-        <div className="fixed top-0 left-0 right-0 h-[100vh] pointer-events-none" style={{ zIndex: 55 }}>
-          <FlyingButterflies count={4} minSize={30} maxSize={80} speed={0.4} variants={["monarch", "saffron", "azure", "rose", "jade"]} zIndex={55} />
+        <div className="fixed top-0 left-0 right-0 h-20 overflow-visible pointer-events-none" style={{ zIndex: 55 }}>
+          <FlyingButterflies count={3} minSize={25} maxSize={60} speed={0.35} variants={["monarch", "saffron", "azure", "rose", "jade"]} zIndex={55} />
         </div>
         <AnnouncementBanner
           text={siteData.announcement.text}
