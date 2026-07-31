@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getImagePath } from "@/lib/image-loader";
+import FlyingButterflies from "@/components/FlyingButterflies";
 
 interface HomeHeroProps {
   title: string;
@@ -9,7 +10,7 @@ interface HomeHeroProps {
 export default function HomeHero({ title, subtitle }: HomeHeroProps) {
   return (
     <section className="relative overflow-hidden min-h-[70vh] flex items-center">
-      {/* Warm gradient background - lighter to contrast with saffron image */}
+      {/* Warm gradient background */}
       <div
         className="absolute inset-0"
         style={{
@@ -52,6 +53,9 @@ export default function HomeHero({ title, subtitle }: HomeHeroProps) {
           ))}
         </svg>
       </div>
+
+      {/* Flying butterflies — hero only, above navbar */}
+      <FlyingButterflies count={8} minSize={28} maxSize={100} speed={0.5} variants={["monarch", "saffron", "sulphur", "azure", "rose", "jade", "dusk"]} zIndex={55} />
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-8">

@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnnouncementBanner from "@/components/AnnouncementBanner";
 import ScrollRevealProvider from "@/components/ScrollRevealProvider";
+import FlyingButterflies from "@/components/FlyingButterflies";
 import siteData from "@/data/site.json";
 
 export const metadata: Metadata = {
@@ -42,6 +43,9 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col">
         <ScrollRevealProvider />
+        <div className="fixed top-0 left-0 right-0 h-[100vh] pointer-events-none" style={{ zIndex: 55 }}>
+          <FlyingButterflies count={4} minSize={30} maxSize={80} speed={0.4} variants={["monarch", "saffron", "azure", "rose", "jade"]} zIndex={55} />
+        </div>
         <AnnouncementBanner
           text={siteData.announcement.text}
           href={siteData.announcement.href}
