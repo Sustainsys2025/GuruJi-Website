@@ -27,6 +27,7 @@
       "label": "GuruJi Gallary",
       "href": "/gallery",
       "children": [
+        { "label": "Sep26 - GuruJi Satsang", "href": "/gallery/sep26-guruji-satsang" },
         { "label": "Aug26 - GuruJi Satsang", "href": "/gallery/aug26-guruji-satsang" },
         { "label": "Jul26 - Birthday Satsang", "href": "/gallery/jul26-birthday-satsang" },
         { "label": "Jun26 - GuruJi Satsang", "href": "/gallery/jun26-guruji-satsang" },
